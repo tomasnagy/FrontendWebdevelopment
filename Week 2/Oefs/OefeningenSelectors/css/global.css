@@ -1,2 +1,40 @@
-﻿body {
-}
+a[href*=".pdf"]:before {
+  content: "";
+  display: block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  background-position: top center;
+  background: url("../images/icon_pdf.png") no-repeat; }
+
+a[href*=".doc"]:before {
+  content: "";
+  display: block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  background-position: top center;
+  background: url("../images/icon_doc.png") no-repeat; }
+
+a[href*=".mov"]:before {
+  content: "";
+  display: block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  background-position: top center;
+  background: url("../images/icon_film.png") no-repeat; }
+
+a[href*=".jpg"]:before {
+  content: "";
+  display: block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  background-position: top center;
+  background: url("../images/icon_photo.png") no-repeat; }
+
+img {
+  box-shadow: 0px 0px 0px 10px white, 0px 20px 0px 10px white, 0px 0px 20px 13px rgba(0, 0, 0, 0.5); }
+
+/*# sourceMappingURL=global.css.map */
