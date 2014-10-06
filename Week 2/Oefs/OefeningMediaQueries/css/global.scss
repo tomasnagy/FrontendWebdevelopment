@@ -1,8 +1,21 @@
 @media screen and (min-width: 1200px) {
+  #header {
+    overflow: visible;
+    >  img {
+      clear: both;
+    }
+
+    > form {
+      clear: both;
+    }
+  }
+
   #nav-main {
-    clear: both;
     width: 25%;
+    clear: left;
+    color: red;
     float: left;
+    margin: 20px 20px 20px 0px;
     li {
       float: none;
     }
