@@ -12,6 +12,8 @@ function buttonClicked(e) {
         htmlBuilder,
         section = document.getElementsByTagName("section")[0];
 
+    if(typeof age !== 'number') return;
+
     htmlBuilder = '<figure data-age="' + age.value + '"><img src="' + image.value + '" alt= "person"/><figcaption>' + fname.value + ' ' + lastname.value + '</figcaption></figure>';
 
 
