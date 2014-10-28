@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Help file</title>
+    <link href="styles/normalize.css" rel="stylesheet" />
+    <link href="styles/bootstrap.css" rel="stylesheet">
+    <link href="styles/helpmij.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Help mij</h1>
+    <div class="alert alert-info" role="alert">
+        <p>Doordat het gebruik van internet verboden is voorzien wij deze file met een aantal zaken die jullie kunnen en mogen gebruiken voor dit examen.</p>
+        <p>Indien jullie extra libraries of frameworks willen gebruiken mogen jullie dit enkel doen na toestemming van uw docent.</p>
+    </div>
+
+    <h2>Bootstrap</h2>
+    <h3>De buttons</h3>
+    <button class="btn btn-default">Default</button>
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-danger">Danger</button>
+
+    <h3>De button groups</h3>
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary">Overview</button>
+        <button type="button" class="btn btn-default">Charts</button>
+    </div>
+    <h3>De icoontjes</h3>
+    <i class="glyphicon glyphicon-search"></i>
+    <i class="glyphicon glyphicon-picture"></i>
+    <i class="glyphicon glyphicon-hdd"></i>
+    <i class="glyphicon glyphicon-search"></i>
+    <i class="glyphicon glyphicon-remove"></i>
+    <h2>De images overview</h2>
+    <h3>CSS</h3>
+    <code>
+        #wrapper{<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;-webkit-column-count: 3;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;-webkit-column-gap: 15px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;-webkit-column-fill: auto;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;-moz-column-count: 3;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;-moz-column-gap: 15px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;-moz-column-fill: auto;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;column-count: 3;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;column-gap: 15px;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;column-fill: auto;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;width: 90%;<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;margin: 10px auto;<br />
+        }
+        <br /><br />
+        #wrapper .img{<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;display: inline-block;<br />
+        }
+    </code>
+    <h2>Data ophalen</h2>
+    <h3>Voor de Visual Studio liefhebbers</h3>
+    <p>Wie gebruik maakt van Visual Studio en JSON uitleest op IIS, moet de volgende configuratie toevoegen in de web.config:</p>
+    <code>
+        &lt;!-- toevoegen voor specifieke file types, anders not found --&gt;<br/>
+        &lt;system.webServer&gt;<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;staticContent&gt;<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mimeMap fileExtension=".json" mimeType="application/json" /&gt;<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/staticContent&gt;<br/>
+        &lt;/system.webServer&gt;
+
+    </code>
+
+    <h3>Lokaal data ophalen wanneer je chrome gebruikt</h3>
+    <p>Bij lokaal werken met Chrome, veroorzaakt een webworker een security error. Wil je dat verhinderen, start dan Chrome op met  volgende argumenten: <code>chrome.exe - -allow-file-access-from-files</code>.</p>
+    <h2>Chart.js</h2>
+    <h3>De data</h3>
+    <p>De data die je grafiek nodig heeft is een array van items die info geeft over elk element. In ons geval zal die er ongeveer zo uit zien:</p>
+    <code>
+        [<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: 10,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: kevinderudder.color.randomColor(),<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;highlight: "#FF9999",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label: "multi-mania"<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;}, <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;{<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: 8,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: kevinderudder.color.randomColor(),<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;highlight: "#FF9999",<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label: "nmct"<br />
+        &nbsp;&nbsp;&nbsp;&nbsp; }, <br />
+        ]
+    </code>
+    <p>De help files voor chart.js kan je ook in je source files terug vinden. Zie het info mapje</p>
+    <h2>Helpers</h2>
+    <h3>Random kleur</h3>
+    <p>Bij het genereren van de grafiek heb je kleuren nodig. Wij hebben al een functie voorzien om kleuren te generen</p>
+    <h4>Kleuren</h4>
+    <code>
+        kevinderudder.color.randomColor()
+    </code>
+    <h4>Pastelkleuren (omdat het kan)</h4>
+    <code>
+        kevinderudder.color.randomPastelColor()
+    </code>
+    <footer>
+        &copy; nmct 2014 (Kevin DeRudder &amp; Johan Vannieuwenhuyse)
+    </footer>
+    <script src="scripts/jquery-1.9.0.min.js"></script>
+    <script src="scripts/kevinderudder.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/Chart.min.js"></script>
+    <script src="scripts/ChartOptions.js"></script>
+</body>
+</html>

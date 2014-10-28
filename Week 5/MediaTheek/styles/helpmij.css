@@ -1,0 +1,19 @@
+﻿body {
+    padding: 5px;
+    margin: 10px;
+}
+
+h1 {
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+footer {
+    width: 450px;
+    margin: 0 auto;
+}

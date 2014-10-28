@@ -62,7 +62,7 @@ Ball.prototype = {
            ball.angle = 180 - ball.angle;
        }
         if(ball.y > ball.context.canvas.height - ball.radius || ball.y < 0 + ball.radius) {
-            ball.angle = ball.angle;
+            ball.angle = 180 - ball.angle;
         }
     }
 }
